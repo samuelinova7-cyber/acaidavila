@@ -1,0 +1,6 @@
+{
+  "name": "Açaí da Vila",
+  "description": "Cardápio interativo e pedidos via WhatsApp do Açaí da Vila - Praia do Francês",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
