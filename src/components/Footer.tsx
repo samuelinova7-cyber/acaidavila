@@ -43,13 +43,23 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInfo }) => {
 
         {/* Col 3: Social & Contact */}
         <div className="space-y-3">
-          <h4 className="text-xs font-bold text-[#C77DFF] uppercase tracking-wider">Redes Sociais & Contato</h4>
-          <div className="flex items-center gap-3">
+          <h4 className="text-xs font-bold text-[#C77DFF] uppercase tracking-wider">Peça Online & Redes</h4>
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href={BRAND_INFO.ifoodUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-3 py-2 rounded-xl bg-[#EA1D2C] hover:bg-[#C81220] text-white font-black text-xs inline-flex items-center gap-1.5 transition-all shadow"
+              title="Peça no iFood"
+            >
+              <span className="bg-white text-[#EA1D2C] text-[9px] px-1 py-0.5 rounded font-black">iFood</span>
+              <span>Peça no iFood</span>
+            </a>
             <a
               href={BRAND_INFO.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="p-2.5 rounded-xl bg-[#00C853] text-[#1E0427] hover:bg-[#00A843] transition-all"
+              className="p-2 rounded-xl bg-[#00C853] text-[#1E0427] hover:bg-[#00A843] transition-all"
               title="Falar no WhatsApp"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
@@ -58,17 +68,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInfo }) => {
               href={BRAND_INFO.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="p-2.5 rounded-xl bg-[#2A0835] border border-[#8E156A]/40 text-[#C77DFF] hover:text-white transition-all"
+              className="p-2 rounded-xl bg-[#2A0835] border border-[#8E156A]/40 text-[#C77DFF] hover:text-white transition-all"
               title="Siga no Instagram"
             >
               <Instagram className="w-4 h-4" />
             </a>
-            <button
-              onClick={onOpenInfo}
-              className="text-xs text-[#00C853] hover:underline ml-2 cursor-pointer"
-            >
-              Ver Detalhes
-            </button>
           </div>
         </div>
 

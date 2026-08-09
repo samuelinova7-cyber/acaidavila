@@ -76,6 +76,16 @@ export const LocationModal: React.FC<LocationModalProps> = ({ isOpen, onClose })
         {/* Action Buttons */}
         <div className="pt-2 border-t border-[#8E156A]/30 space-y-2">
           <a
+            href={BRAND_INFO.ifoodUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full inline-flex items-center justify-center gap-2 bg-[#EA1D2C] hover:bg-[#C81220] text-white font-black text-xs px-4 py-3 rounded-xl shadow-[0_0_15px_rgba(234,29,44,0.3)] uppercase tracking-tight transition-all cursor-pointer border border-red-400/30"
+          >
+            <span className="bg-white text-[#EA1D2C] font-black text-[9px] px-1 py-0.5 rounded uppercase">iFood</span>
+            <span>Pedir no iFood</span>
+          </a>
+
+          <a
             href={BRAND_INFO.whatsappUrl}
             target="_blank"
             rel="noreferrer"

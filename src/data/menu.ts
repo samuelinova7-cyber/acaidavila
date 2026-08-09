@@ -14,6 +14,8 @@ export const BRAND_INFO = {
   services: ["Retirada no local", "Delivery na Praia do Francês"],
   instagram: "@acaidavila_f6",
   instagramUrl: "https://instagram.com/acaidavila_f6",
+  ifoodUrl: "https://www.ifood.com.br",
+  ifoodName: "Açaí da Vila no iFood",
   deliveryZone: "Praia do Francês"
 };
 

@@ -86,33 +86,30 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart, cartCount, onOpenInf
             </div>
           </div>
 
-          {/* Action CTAs & Cart Trigger */}
-          <div className="flex flex-row md:flex-col items-center gap-3 w-full sm:w-auto justify-center">
+          {/* Action CTAs */}
+          <div className="flex flex-col sm:flex-row md:flex-col items-center gap-3 w-full sm:w-auto justify-center">
             
+            {/* Red iFood Button */}
+            <a
+              href={BRAND_INFO.ifoodUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#EA1D2C] hover:bg-[#C81220] text-white font-black text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-[0_0_20px_rgba(234,29,44,0.4)] uppercase tracking-tight transition-all transform active:scale-95 cursor-pointer border border-red-400/30"
+            >
+              <span className="bg-white text-[#EA1D2C] font-black text-[10px] px-1.5 py-0.5 rounded uppercase">iFood</span>
+              <span>Peça no iFood</span>
+            </a>
+
             {/* WhatsApp Direct */}
             <a
               href={BRAND_INFO.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#00C853] hover:bg-[#00A843] text-[#1E0427] font-black text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-[0_0_20px_rgba(0,200,83,0.3)] uppercase tracking-tight transition-all transform active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#00C853] hover:bg-[#00A843] text-[#1E0427] font-black text-xs sm:text-sm px-6 py-3 rounded-xl shadow-[0_0_15px_rgba(0,200,83,0.3)] uppercase tracking-tight transition-all transform active:scale-95 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               <span>Peça pelo WhatsApp</span>
             </a>
-
-            {/* Cart Button */}
-            <button
-              onClick={onOpenCart}
-              className="flex-1 sm:flex-none relative inline-flex items-center justify-center gap-2 bg-[#2A0835] hover:bg-[#8E156A]/80 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl border border-[#8E156A] shadow-xl transition-all transform active:scale-95 cursor-pointer uppercase tracking-tight"
-            >
-              <ShoppingBag className="w-4 h-4 text-[#C77DFF]" />
-              <span>Ver Pedido</span>
-              {cartCount > 0 && (
-                <span className="bg-[#00C853] text-[#1E0427] font-black text-xs w-5 h-5 rounded-full flex items-center justify-center animate-bounce">
-                  {cartCount}
-                </span>
-              )}
-            </button>
 
             {/* Store Details Button */}
             <button
