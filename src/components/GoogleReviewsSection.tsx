@@ -139,6 +139,22 @@ export const GoogleReviewsSection: React.FC = () => {
   return (
     <section className="bg-[#2A0835] border-l-4 border-l-[#00C853] border-t border-r border-b border-[#8E156A]/50 rounded-r-2xl p-5 sm:p-8 shadow-2xl space-y-6 my-8">
       
+      {/* Featured Banner Image for Quem Provou, Amou */}
+      <div className="relative rounded-2xl overflow-hidden border border-[#8E156A]/60 shadow-xl bg-[#1E0427] max-h-[300px] sm:max-h-[360px] group">
+        <img
+          src="https://res.cloudinary.com/xhuikt2k/image/upload/v1786987319/WhatsApp_Image_2026-08-17_at_2.18.46_PM.jpg"
+          alt="Quem Provou, Amou! - Açaí da Vila"
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover object-center max-h-[300px] sm:max-h-[360px] group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1E0427] via-transparent to-transparent opacity-70" />
+        <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+          <span className="bg-[#1E0427]/85 backdrop-blur-md text-white text-[10px] sm:text-xs font-black px-3.5 py-1.5 rounded-full border border-[#00C853] uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+            <span>⭐ Clientes Apaixonados na Praia do Francês</span>
+          </span>
+        </div>
+      </div>
+
       {/* Header & Overall Google Score */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-[#8E156A]/30">
         

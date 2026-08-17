@@ -42,10 +42,13 @@ export const LocationModal: React.FC<LocationModalProps> = ({ isOpen, onClose })
 
           <div className="flex items-start gap-3 bg-[#1E0427] p-4 rounded-2xl border border-[#8E156A]/30">
             <Clock className="w-5 h-5 text-[#C77DFF] shrink-0 mt-0.5" />
-            <div>
-              <h4 className="text-xs font-bold text-[#C77DFF] uppercase tracking-wider mb-1">Horário de Atendimento</h4>
-              <p className="text-sm text-white font-medium">{BRAND_INFO.hours}</p>
-              <p className="text-xs text-[#00C853] font-semibold mt-1">Aberto de Segunda a Domingo</p>
+            <div className="space-y-1">
+              <h4 className="text-xs font-bold text-[#C77DFF] uppercase tracking-wider">Horário de Atendimento</h4>
+              <div className="text-xs text-white space-y-0.5 font-medium">
+                <p><span className="text-[#00C853] font-bold">• Terça a Sexta:</span> 08h às 18:30</p>
+                <p><span className="text-[#00C853] font-bold">• Sábado e Domingo:</span> 08h às 20:00</p>
+                <p><span className="text-rose-400 font-bold">• Segunda-feira:</span> Fechado</p>
+              </div>
             </div>
           </div>
 

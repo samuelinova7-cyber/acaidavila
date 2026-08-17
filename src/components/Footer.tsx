@@ -36,9 +36,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInfo }) => {
             <Phone className="w-3.5 h-3.5 text-[#C77DFF] shrink-0" />
             <span>{BRAND_INFO.phone}</span>
           </p>
-          <p className="text-xs text-gray-400 pt-1">
-            Segunda a Domingo: 14h às 22h
-          </p>
+          <div className="text-[11px] text-gray-300 pt-1 space-y-0.5">
+            <p>Ter a Sex: 08h às 18h30</p>
+            <p>Sáb e Dom: 08h às 20h</p>
+            <p className="text-rose-300">Segunda: Fechado</p>
+          </div>
         </div>
 
         {/* Col 3: Social & Contact */}

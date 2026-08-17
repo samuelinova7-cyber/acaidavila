@@ -33,16 +33,18 @@ export default function App() {
       {/* Main Container */}
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 space-y-8">
 
-        {/* Hero Visual Banner Card (Full width image with zoom animation) */}
+        {/* Hero Visual Banner Card (Full width video background with overlay) */}
         <div className="relative rounded-3xl overflow-hidden border-2 border-[#EA1D2C]/60 shadow-[0_0_30px_rgba(234,29,44,0.25)] bg-[#1E0427] min-h-[340px] sm:min-h-[420px] md:min-h-[480px] flex items-end group">
           
-          {/* Animated Background Image */}
+          {/* Animated Background Video */}
           <div className="absolute inset-0 z-0 overflow-hidden">
-            <img
-              src="https://res.cloudinary.com/gu3r4btn/image/upload/v1786296541/WhatsApp_Image_2026-08-09_at_2.17.43_PM_agez6d.jpg"
-              alt="Açaí Fresco & Cremoso na Praia do Francês"
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out animate-pulse-subtle"
+            <video
+              src="https://res.cloudinary.com/xhuikt2k/video/upload/v1786987348/WhatsApp_Video_2026-08-17_at_2.18.48_PM.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover object-center"
             />
           </div>
 

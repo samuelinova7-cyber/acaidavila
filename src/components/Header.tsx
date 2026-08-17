@@ -10,12 +10,38 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenCart, cartCount, onOpenInfo }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [statusText, setStatusText] = useState('');
 
   useEffect(() => {
-    // Check if open (14h to 22h local time)
-    const now = new Date();
-    const currentHour = now.getHours();
-    setIsOpen(currentHour >= BRAND_INFO.openingStartHour && currentHour < BRAND_INFO.openingEndHour);
+    // Business hours check:
+    // Terça a sexta: 08:00 às 18:30
+    // Sábado e domingo: 08:00 às 20:00
+    // Segunda-feira: Fechado
+    const checkOpenStatus = () => {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Dom, 1 = Seg, 2 = Ter, 3 = Qua, 4 = Qui, 5 = Sex, 6 = Sáb
+      const hour = now.getHours() + now.getMinutes() / 60;
+
+      if (day === 1) {
+        // Segunda-feira
+        setIsOpen(false);
+        setStatusText('Fechado às Segundas • Abre Terça às 08h');
+      } else if (day >= 2 && day <= 5) {
+        // Terça a sexta: 08:00 às 18:30
+        const open = hour >= 8 && hour < 18.5;
+        setIsOpen(open);
+        setStatusText(open ? 'Aberto Agora (Ter a Sex até 18:30)' : 'Fechado • Ter a Sex: 08h às 18h30');
+      } else {
+        // Sábado e domingo: 08:00 às 20:00
+        const open = hour >= 8 && hour < 20;
+        setIsOpen(open);
+        setStatusText(open ? 'Aberto Agora (Sáb e Dom até 20:00)' : 'Fechado • Sáb e Dom: 08h às 20h');
+      }
+    };
+
+    checkOpenStatus();
+    const interval = setInterval(checkOpenStatus, 60000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -61,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart, cartCount, onOpenInf
                   : 'bg-amber-500/15 text-amber-300 border-amber-500/40'
               }`}>
                 <span className={`w-2 h-2 rounded-full ${isOpen ? 'bg-[#00C853] animate-ping' : 'bg-amber-400'}`} />
-                {isOpen ? 'Aberto Agora (14h - 22h)' : 'Atendimento das 14h às 22h'}
+                <span>{statusText || (isOpen ? 'Aberto Agora' : 'Fechado no momento')}</span>
               </div>
 
               {/* Location Badge */}

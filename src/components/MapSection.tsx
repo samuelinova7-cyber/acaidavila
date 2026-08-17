@@ -102,12 +102,11 @@ export const MapSection: React.FC = () => {
               <Clock className="w-4 h-4" />
               <span>Horário de Funcionamento</span>
             </div>
-            <p className="text-sm font-bold text-white">
-              {BRAND_INFO.hours}
-            </p>
-            <span className="inline-block bg-[#00C853]/15 text-[#00C853] text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-[#00C853]/40 uppercase tracking-wider">
-              Aberto Todos os Dias
-            </span>
+            <div className="text-xs text-white space-y-1 font-medium">
+              <p><span className="text-[#00C853] font-bold">• Terça a Sexta:</span> 08h às 18:30</p>
+              <p><span className="text-[#00C853] font-bold">• Sábado e Domingo:</span> 08h às 20:00</p>
+              <p><span className="text-rose-400 font-bold">• Segunda-feira:</span> Fechado</p>
+            </div>
           </div>
 
           {/* Delivery & WhatsApp */}

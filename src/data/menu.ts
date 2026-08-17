@@ -5,16 +5,19 @@ export const BRAND_INFO = {
   slogan: "Muito Mais Sabor, Muito Mais Vila",
   badge: "Cara Nova ✨",
   address: "Vila dos Pescadores, Nº 28 — Praia do Francês",
-  phone: "(82) 98763-0110",
-  whatsappNumber: "5582987630110",
-  whatsappUrl: "https://wa.me/5582987630110",
-  hours: "Segunda a Domingo, das 14h às 22h",
-  openingStartHour: 14,
-  openingEndHour: 22,
+  phone: "(82) 99383-4290",
+  whatsappNumber: "5582993834290",
+  whatsappUrl: "https://wa.me/5582993834290",
+  hours: "Ter a Sex: 08h às 18h30 | Sáb e Dom: 08h às 20h (Segunda Fechado)",
+  schedule: {
+    tueToFri: "Terça a sexta: 08h às 18:30",
+    satAndSun: "Sábado e domingo: 08h às 20:00",
+    monday: "Segunda-feira: Fechado"
+  },
   services: ["Retirada no local", "Delivery na Praia do Francês"],
   instagram: "@acaidavila_f6",
   instagramUrl: "https://instagram.com/acaidavila_f6",
-  ifoodUrl: "https://www.ifood.com.br",
+  ifoodUrl: "https://www.ifood.com.br/delivery/marechal-deodoro-al/acai-da-vila-praia-do-frances/644be234-c71e-4381-9fe8-5133330cd326?utm_medium=share",
   ifoodName: "Açaí da Vila no iFood",
   deliveryZone: "Praia do Francês"
 };
