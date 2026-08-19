@@ -5,6 +5,7 @@ import { LocationModal } from './components/LocationModal';
 import { Footer } from './components/Footer';
 import { InstagramCarousel } from './components/InstagramCarousel';
 import { GoogleReviewsSection } from './components/GoogleReviewsSection';
+import { GalleryMarquee } from './components/GalleryMarquee';
 import { MapSection } from './components/MapSection';
 import { BRAND_INFO } from './data/menu';
 import { MapPin, Bike, MessageCircle, ExternalLink, ChevronRight } from 'lucide-react';
@@ -132,6 +133,9 @@ export default function App() {
 
         {/* Google Reviews Section */}
         <GoogleReviewsSection />
+
+        {/* Infinite Scrolling Gallery Carousel (Moving Right) */}
+        <GalleryMarquee />
 
         {/* Location Map (Praia do Francês) */}
         <MapSection />
