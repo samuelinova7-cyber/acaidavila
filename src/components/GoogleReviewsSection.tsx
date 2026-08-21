@@ -134,7 +134,7 @@ export const GoogleReviewsSection: React.FC = () => {
     }
   };
 
-  const googleReviewSearchUrl = `https://www.google.com/search?q=Acai+da+Vila+Praia+do+Frances+Alagoas#lrd=0x0:0x0,3`;
+  const googleReviewSearchUrl = BRAND_INFO.googleReviewUrl || `https://g.page/r/CQVK-RqO4077EAE/review`;
 
   return (
     <section className="bg-[#2A0835] border-l-4 border-l-[#00C853] border-t border-r border-b border-[#8E156A]/50 rounded-r-2xl p-5 sm:p-8 shadow-2xl space-y-6 my-8">

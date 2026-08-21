@@ -1,6 +1,6 @@
 import React from 'react';
 import { BRAND_INFO } from '../data/menu';
-import { MapPin, Phone, Instagram, MessageCircle, Heart } from 'lucide-react';
+import { MapPin, Phone, Instagram, MessageCircle, Heart, Star } from 'lucide-react';
 
 interface FooterProps {
   onOpenInfo: () => void;
@@ -74,6 +74,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInfo }) => {
               title="Siga no Instagram"
             >
               <Instagram className="w-4 h-4" />
+            </a>
+            <a
+              href={BRAND_INFO.googleReviewUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 rounded-xl bg-[#2A0835] border border-amber-500/40 text-amber-400 hover:bg-amber-400 hover:text-[#1E0427] transition-all"
+              title="Avaliar no Google"
+            >
+              <Star className="w-4 h-4 fill-current" />
             </a>
           </div>
         </div>

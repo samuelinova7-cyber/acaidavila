@@ -17,6 +17,7 @@ export const BRAND_INFO = {
   services: ["Retirada no local", "Delivery na Praia do Francês"],
   instagram: "@acaidavila_f6",
   instagramUrl: "https://instagram.com/acaidavila_f6",
+  googleReviewUrl: "https://g.page/r/CQVK-RqO4077EAE/review",
   ifoodUrl: "https://www.ifood.com.br/delivery/marechal-deodoro-al/acai-da-vila-praia-do-frances/644be234-c71e-4381-9fe8-5133330cd326?utm_medium=share",
   ifoodName: "Açaí da Vila no iFood",
   deliveryZone: "Praia do Francês"
