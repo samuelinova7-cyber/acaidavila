@@ -120,12 +120,15 @@ export const MapSection: React.FC = () => {
             </p>
 
             <a
-              href={BRAND_INFO.whatsappUrl}
+              href={BRAND_INFO.whatsappDeliveryUrl}
               target="_blank"
               rel="noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 bg-[#00C853] hover:bg-[#00A843] text-[#1E0427] font-black text-xs py-3 rounded-xl uppercase tracking-tight shadow transition-all active:scale-95 cursor-pointer"
+              className="w-full inline-flex items-center justify-center gap-2 btn-whatsapp-vibrant btn-whatsapp-pulse text-xs py-3.5 rounded-xl uppercase tracking-tight shadow-[0_0_20px_rgba(0,230,118,0.5)] active:scale-95 cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <div className="relative flex items-center justify-center">
+                <span className="absolute w-3.5 h-3.5 rounded-full bg-white/70 animate-ping opacity-75" />
+                <MessageCircle className="w-4 h-4 fill-current relative z-10" />
+              </div>
               <span>Chamar no WhatsApp</span>
             </a>
           </div>

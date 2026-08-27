@@ -9,7 +9,7 @@ import {
   SALGADOS_E_BEBIDAS, 
   ESPECIAIS_COMBO 
 } from '../data/menu';
-import { Search, ExternalLink, Sparkles, Flame } from 'lucide-react';
+import { Search, ExternalLink, Sparkles, Flame, MessageCircle } from 'lucide-react';
 
 export const MenuCatalog: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -596,15 +596,27 @@ export const MenuCatalog: React.FC = () => {
           </div>
         </div>
 
-        <a
-          href={BRAND_INFO.ifoodUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-[#EA1D2C] hover:bg-gray-100 font-black text-xs sm:text-sm px-7 py-3.5 rounded-xl shadow-xl uppercase tracking-tight transition-all active:scale-95 shrink-0"
-        >
-          <span>Abrir Cardápio no iFood</span>
-          <ExternalLink className="w-4 h-4" />
-        </a>
+        <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+          <a
+            href={BRAND_INFO.whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 btn-whatsapp-vibrant btn-whatsapp-pulse text-xs sm:text-sm px-6 py-3.5 rounded-xl uppercase tracking-tight transition-all active:scale-95 shrink-0"
+          >
+            <MessageCircle className="w-4 h-4 fill-current" />
+            <span>Pedir no WhatsApp</span>
+          </a>
+
+          <a
+            href={BRAND_INFO.ifoodUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-[#EA1D2C] hover:bg-gray-100 font-black text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-xl uppercase tracking-tight transition-all active:scale-95 shrink-0"
+          >
+            <span>Abrir no iFood</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
       </div>
 
     </div>

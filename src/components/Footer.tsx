@@ -61,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInfo }) => {
               href={BRAND_INFO.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-xl bg-[#00C853] text-[#1E0427] hover:bg-[#00A843] transition-all"
+              className="p-2.5 rounded-xl btn-whatsapp-vibrant btn-whatsapp-pulse transition-all flex items-center justify-center shadow-[0_0_15px_rgba(0,230,118,0.5)]"
               title="Falar no WhatsApp"
             >
               <MessageCircle className="w-4 h-4 fill-current" />

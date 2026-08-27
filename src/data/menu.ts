@@ -1,5 +1,10 @@
 import { SizeOption, Accompaniment, AddOn, BaseMenuItem } from '../types';
 
+export const getWhatsAppUrl = (message?: string) => {
+  const defaultMsg = "Olá, Açaí da Vila! 🍧 Gostaria de fazer um pedido e tirar dúvidas sobre o cardápio da Praia do Francês.";
+  return `https://wa.me/5582993834290?text=${encodeURIComponent(message || defaultMsg)}`;
+};
+
 export const BRAND_INFO = {
   name: "Açaí da Vila",
   slogan: "Muito Mais Sabor, Muito Mais Vila",
@@ -7,7 +12,9 @@ export const BRAND_INFO = {
   address: "Vila dos Pescadores, Nº 28 — Praia do Francês",
   phone: "(82) 99383-4290",
   whatsappNumber: "5582993834290",
-  whatsappUrl: "https://wa.me/5582993834290",
+  whatsappUrl: getWhatsAppUrl(),
+  whatsappDeliveryUrl: getWhatsAppUrl("Olá, Açaí da Vila! 🛵 Gostaria de fazer um pedido para entrega na Praia do Francês."),
+  whatsappLocationUrl: getWhatsAppUrl("Olá, Açaí da Vila! 📍 Gostaria de informações sobre atendimento e retirada no balcão da Vila dos Pescadores."),
   hours: "Ter a Sex: 08h às 18h30 | Sáb e Dom: 08h às 20h (Segunda Fechado)",
   schedule: {
     tueToFri: "Terça a sexta: 08h às 18:30",

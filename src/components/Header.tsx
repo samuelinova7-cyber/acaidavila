@@ -131,9 +131,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart, cartCount, onOpenInf
               href={BRAND_INFO.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#00C853] hover:bg-[#00A843] text-[#1E0427] font-black text-xs sm:text-sm px-6 py-3 rounded-xl shadow-[0_0_15px_rgba(0,200,83,0.3)] uppercase tracking-tight transition-all transform active:scale-95 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 btn-whatsapp-vibrant btn-whatsapp-pulse text-xs sm:text-sm px-6 py-3.5 rounded-xl uppercase tracking-tight active:scale-95 cursor-pointer shadow-[0_0_25px_rgba(0,230,118,0.6)]"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <div className="relative flex items-center justify-center">
+                <span className="absolute w-4 h-4 rounded-full bg-white/70 animate-ping opacity-75" />
+                <MessageCircle className="w-4 h-4 fill-current relative z-10" />
+              </div>
               <span>Peça pelo WhatsApp</span>
             </a>
 

@@ -113,15 +113,26 @@ export default function App() {
             </div>
           </div>
 
-          <div className="bg-[#2A0835] border-l-4 border-l-[#00C853] border-t border-r border-b border-[#8E156A]/40 rounded-r-2xl p-4 flex items-center gap-3 shadow-lg">
-            <div className="p-2.5 rounded-xl bg-[#1A237E]/60 text-[#00C853] shrink-0 border border-[#8E156A]/30">
-              <MessageCircle className="w-5 h-5" />
+          <a
+            href={BRAND_INFO.whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="group bg-[#2A0835] hover:bg-[#1E0427] border-l-4 border-l-[#00E676] border-t border-r border-b border-[#8E156A]/40 hover:border-[#00E676]/60 rounded-r-2xl p-4 flex items-center gap-3 shadow-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,230,118,0.3)] cursor-pointer"
+          >
+            <div className="relative p-2.5 rounded-xl bg-[#00E676]/20 text-[#00E676] group-hover:bg-[#00E676] group-hover:text-[#0A2412] shrink-0 border border-[#00E676]/40 transition-all duration-300">
+              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#00E676] animate-ping" />
+              <MessageCircle className="w-5 h-5 fill-current" />
             </div>
-            <div>
-              <p className="text-[10px] text-[#C77DFF] font-black uppercase tracking-widest">Atendimento WhatsApp</p>
-              <p className="text-xs font-semibold text-white">{BRAND_INFO.phone}</p>
+            <div className="flex-1 min-w-0">
+              <p className="text-[10px] text-[#00E676] font-black uppercase tracking-widest flex items-center gap-1">
+                <span>Atendimento WhatsApp</span>
+                <span className="text-[9px] bg-[#00E676]/20 text-[#00E676] px-1.5 py-0.2 rounded-full font-bold">Online</span>
+              </p>
+              <p className="text-xs font-bold text-white group-hover:text-[#00E676] transition-colors truncate">
+                {BRAND_INFO.phone} — Chamar agora
+              </p>
             </div>
-          </div>
+          </a>
 
         </div>
 
@@ -147,6 +158,29 @@ export default function App() {
         isOpen={isInfoOpen}
         onClose={() => setIsInfoOpen(false)}
       />
+
+      {/* Floating WhatsApp Quick Action Button */}
+      <aside aria-label="Atendimento rápido WhatsApp" className="fixed bottom-5 right-5 z-40 flex items-center gap-2.5">
+        <a
+          href={BRAND_INFO.whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Fazer pedido pelo WhatsApp"
+          className="group relative flex items-center gap-2.5 btn-whatsapp-vibrant btn-whatsapp-pulse pl-3.5 pr-4 py-3 rounded-full shadow-[0_0_30px_rgba(0,230,118,0.7)] hover:scale-105 active:scale-95 transition-all cursor-pointer border-2 border-emerald-300"
+        >
+          {/* Animated beacon ring */}
+          <span className="absolute -inset-1 rounded-full bg-[#00E676] opacity-40 animate-ping pointer-events-none" />
+          
+          <div className="relative flex items-center justify-center">
+            <MessageCircle className="w-6 h-6 fill-current text-[#0A2412]" />
+          </div>
+
+          <div className="flex flex-col text-left leading-none">
+            <span className="text-[9px] font-black uppercase tracking-wider text-[#0A2412]/80">Pedir Agora</span>
+            <span className="text-xs font-black text-[#0A2412] uppercase tracking-tight">WhatsApp</span>
+          </div>
+        </a>
+      </aside>
 
       {/* Footer */}
       <Footer onOpenInfo={() => setIsInfoOpen(true)} />
