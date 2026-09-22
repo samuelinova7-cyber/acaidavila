@@ -5,6 +5,7 @@ import { LocationModal } from './components/LocationModal';
 import { Footer } from './components/Footer';
 import { InstagramCarousel } from './components/InstagramCarousel';
 import { GoogleReviewsSection } from './components/GoogleReviewsSection';
+import { MiniGameSection } from './components/MiniGameSection';
 import { GalleryMarquee } from './components/GalleryMarquee';
 import { MapSection } from './components/MapSection';
 import { BRAND_INFO } from './data/menu';
@@ -141,6 +142,9 @@ export default function App() {
 
         {/* Simplified Direct Price Menu */}
         <MenuCatalog />
+
+        {/* Mini Game Section */}
+        <MiniGameSection />
 
         {/* Google Reviews Section */}
         <GoogleReviewsSection />

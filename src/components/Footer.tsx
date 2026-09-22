@@ -1,6 +1,6 @@
 import React from 'react';
 import { BRAND_INFO } from '../data/menu';
-import { MapPin, Phone, Instagram, MessageCircle, Heart, Star } from 'lucide-react';
+import { MapPin, Phone, Instagram, MessageCircle, Heart, Star, Gamepad2 } from 'lucide-react';
 
 interface FooterProps {
   onOpenInfo: () => void;
@@ -83,6 +83,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInfo }) => {
               title="Avaliar no Google"
             >
               <Star className="w-4 h-4 fill-current" />
+            </a>
+            <a
+              href={BRAND_INFO.gameUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 rounded-xl bg-[#2A0835] border border-[#FFD600]/40 text-[#FFD600] hover:bg-[#FFD600] hover:text-[#1E0427] transition-all"
+              title="Jogar Mini Game"
+            >
+              <Gamepad2 className="w-4 h-4" />
             </a>
           </div>
         </div>
